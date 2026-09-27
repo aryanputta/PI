@@ -19,8 +19,8 @@
  *
  */
 
-#ifndef PI_BMV2_DIRECT_RES_SPEC_H_
-#define PI_BMV2_DIRECT_RES_SPEC_H_
+#ifndef TARGETS_BMV2_DIRECT_RES_SPEC_H_
+#define TARGETS_BMV2_DIRECT_RES_SPEC_H_
 
 #include <PI/pi.h>
 
@@ -37,4 +37,4 @@ std::vector<BmMeterRateConfig> convert_from_meter_spec(
 
 }  // namespace pibmv2
 
-#endif  // PI_BMV2_DIRECT_RES_SPEC_H_
+#endif  // TARGETS_BMV2_DIRECT_RES_SPEC_H_

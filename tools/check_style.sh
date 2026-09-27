@@ -26,8 +26,7 @@ return_status=0
 # used for C files
 function run_clang_format() {
     # $1 is directory
-    # $2 is style
-    find $1 -name '*.h' -o -name '*.c' | xargs -r $THIS_DIR/clang_format_check.py -s $2
+    find $1 -name '*.h' -o -name '*.c' | xargs -r $THIS_DIR/clang_format_check.py -s file
     return_status=$(($return_status || $?))
 }
 
@@ -35,20 +34,20 @@ function run_clang_format() {
 function run_cpplint() {
     # $1 is directory
     # $2 is root (for include guard)
-    python3 $THIS_DIR/cpplint.py --root=$2 $( find $1 -name \*.h -or -name \*.cpp )
+    python3 $THIS_DIR/cpplint.py --repository=$ROOT_DIR --root=$2 $( find $1 -name \*.h -or -name \*.cpp )
     return_status=$(($return_status || $?))
 }
 
-run_clang_format $ROOT_DIR/src Google
-run_clang_format $ROOT_DIR/include Google
-run_clang_format $ROOT_DIR/targets/rpc Google
-run_clang_format $ROOT_DIR/targets/dummy Google
-run_clang_format $ROOT_DIR/CLI Google
-run_clang_format $ROOT_DIR/tests Google
-run_clang_format $ROOT_DIR/generators Google
-run_clang_format $ROOT_DIR/examples Google
-run_clang_format $ROOT_DIR/bin Google
-run_clang_format $ROOT_DIR/lib Google
+run_clang_format $ROOT_DIR/src
+run_clang_format $ROOT_DIR/include
+run_clang_format $ROOT_DIR/targets/rpc
+run_clang_format $ROOT_DIR/targets/dummy
+run_clang_format $ROOT_DIR/CLI
+run_clang_format $ROOT_DIR/tests
+run_clang_format $ROOT_DIR/generators
+run_clang_format $ROOT_DIR/examples
+run_clang_format $ROOT_DIR/bin
+run_clang_format $ROOT_DIR/lib
 
 run_cpplint $ROOT_DIR/targets/bmv2
 run_cpplint $ROOT_DIR/frontends_extra/cpp frontends_extra/cpp

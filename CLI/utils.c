@@ -106,8 +106,8 @@ void parse_kv_pair(char *s, char **k, char **v) {
   if (eq) {
     *eq = '\0';
     v_ = eq + 1;
-    for (v_ = eq + 1; *v_ == ' '; v_++)
-      ;
+    for (v_ = eq + 1; *v_ == ' '; v_++) {
+    }
     for (eq = eq - 1; *eq == ' ' && *eq != '\0'; eq--) *eq = '\0';
     for (char *endv = strchr(v_, '\0') - 1; *endv == ' ' && endv >= v_; endv--)
       *endv = '\0';

@@ -19,8 +19,8 @@
  *
  */
 
-#ifndef PI_BMV2_ACTION_HELPERS_H_
-#define PI_BMV2_ACTION_HELPERS_H_
+#ifndef TARGETS_BMV2_ACTION_HELPERS_H_
+#define TARGETS_BMV2_ACTION_HELPERS_H_
 
 #include <PI/pi.h>
 
@@ -40,4 +40,4 @@ char *dump_action_data(const pi_p4info_t *p4info, char *data,
 
 }  // namespace pibmv2
 
-#endif  // PI_BMV2_ACTION_HELPERS_H_
+#endif  // TARGETS_BMV2_ACTION_HELPERS_H_

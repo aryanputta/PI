@@ -56,15 +56,15 @@ static int parse_extras(pi_assign_extra_t *extras) {
     v = NULL;
     token = strtok(NULL, ";");
     if (!token) break;
-    for (; *token == ' '; token++)
-      ;
+    for (; *token == ' '; token++) {
+    }
     if (extra_idx >= MAX_EXTRAS) return 1;
     char *eq = strchr(token, '=');
     if (eq) {
       *eq = '\0';
       v = eq + 1;
-      for (v = eq + 1; *v == ' '; v++)
-        ;
+      for (v = eq + 1; *v == ' '; v++) {
+      }
       for (eq = eq - 1; *eq == ' ' && *eq != '\0'; eq--) *eq = '\0';
       for (char *endv = strchr(v, '\0') - 1; *endv == ' ' && endv >= v; endv--)
         *endv = '\0';

@@ -19,8 +19,8 @@
  *
  */
 
-#ifndef PI_BMV2_CONN_MGR_H_
-#define PI_BMV2_CONN_MGR_H_
+#ifndef TARGETS_BMV2_CONN_MGR_H_
+#define TARGETS_BMV2_CONN_MGR_H_
 
 #include <bm/SimplePreLAG.h>
 #include <bm/Standard.h>
@@ -57,4 +57,4 @@ int conn_mgr_client_close(conn_mgr_t *, dev_id_t dev_id);
 
 }  // namespace pibmv2
 
-#endif  // PI_BMV2_CONN_MGR_H_
+#endif  // TARGETS_BMV2_CONN_MGR_H_

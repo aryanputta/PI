@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Aryan Putta
+#
+# SPDX-License-Identifier: Apache-2.0
+
+BasedOnStyle: Google
+SortIncludes: Never
+KeepEmptyLinesAtEOF: true

@@ -56,7 +56,6 @@ jobs:
       run: |
         docker run -w /PI pi bash -c \
           'ec=0; uv run make check -j2 || ec=$?; (find . -name "test-suite.log" | xargs cat); exit $ec'
-# Comment this out until and unless we make it pass.
-#    - name: Check style
-#      run: |
-#        docker run -w /PI pi ./tools/check_style.sh
+    - name: Check style
+      run: |
+        docker run -w /PI pi ./tools/check_style.sh

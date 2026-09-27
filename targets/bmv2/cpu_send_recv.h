@@ -19,6 +19,9 @@
  *
  */
 
+#ifndef TARGETS_BMV2_CPU_SEND_RECV_H_
+#define TARGETS_BMV2_CPU_SEND_RECV_H_
+
 #include <PI/pi.h>
 
 #include <sys/select.h>
@@ -64,3 +67,5 @@ class CpuSendRecv {
 };
 
 }  // namespace pibmv2
+
+#endif  // TARGETS_BMV2_CPU_SEND_RECV_H_

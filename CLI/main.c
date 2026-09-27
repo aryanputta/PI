@@ -241,8 +241,8 @@ static int process_one_cmd(char *cmd) {
   if (cmd[0] == '\0') return 0;
   add_history(cmd);
   char *token = NULL;
-  for (token = cmd; (*token != '\0') && (*token != ' '); token++)
-    ;
+  for (token = cmd; (*token != '\0') && (*token != ' '); token++) {
+  }
   char *subcmd = NULL;
   if (token[0] != '\0') {
     subcmd = token + 1;

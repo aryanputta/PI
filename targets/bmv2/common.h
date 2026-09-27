@@ -19,8 +19,8 @@
  *
  */
 
-#ifndef PI_BMV2_COMMON_H_
-#define PI_BMV2_COMMON_H_
+#ifndef TARGETS_BMV2_COMMON_H_
+#define TARGETS_BMV2_COMMON_H_
 
 #include <PI/int/pi_int.h>
 #include <PI/p4info.h>
@@ -102,4 +102,4 @@ static inline constexpr pi_entry_handle_t get_default_handle() {
 
 }  // namespace pibmv2
 
-#endif  // PI_BMV2_COMMON_H_
+#endif  // TARGETS_BMV2_COMMON_H_
